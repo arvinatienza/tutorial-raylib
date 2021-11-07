@@ -1,16 +1,19 @@
-#include "Game.h"
+#include "../headers/Game.h"
 #include <raylib.h>
+#include <assert.h>
+#include <string>
 
-Game::Game(int width, int height, std::string title)
+Game::Game(int width, int height, std::string title);
 {
+  assert(!IsWindowReady());
   InitWindow(width, height, title.c_str());
-  SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+  SetTargetFPS(60);
 }
 
 Game::~Game() noexcept
 {
-  CloseWindow()
-
+  assert(IsWindowReady());
+  CloseWindow();
 }
 
 bool Game::GameShouldClose() const
@@ -34,5 +37,5 @@ void Game::Update()
 void Game::Draw()
 {
   ClearBackground(RAYWHITE);
-  DrawText("Congrats! You created your first window! Yayyyy", 190, 200, 20, LIME);
+  DrawText("Tetris", 190, 200, 20, LIME);
 }

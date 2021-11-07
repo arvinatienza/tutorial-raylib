@@ -8,14 +8,15 @@
 *
 ********************************************************************************************/
 
-#include "Game.h"
+#include "../headers/Game.h"
 
 int main(void)
 {
     const int screenWidth = 800;
     const int screenHeight = 600;
+    const std::string title = "Tetris";
 
-    Game game{screenWidth, screenHeight, "Tetris"};
+    Game game(screenWidth,screenHeight,title);
 
     while (!game.GameShouldClose())
     {
