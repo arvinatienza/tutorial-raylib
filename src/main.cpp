@@ -14,14 +14,14 @@ int main(void)
 {
     const int screenWidth = 800;
     const int screenHeight = 600;
-    const std::string title = "Tetris";
+    //const std::string title = "Tetris";
 
-    Game game(screenWidth,screenHeight,title);
+    Game game(screenWidth,screenHeight,"Tetris");
 
-    while (!game.GameShouldClose())
-    {
-      game.Tick();
-    }
+    //while (!game.GameShouldClose())
+    //{
+      //game.Tick();
+    //}
 
     return 0;
 }

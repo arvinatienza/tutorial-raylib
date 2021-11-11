@@ -1,11 +1,13 @@
 #pragma once
 #include <string>
 
+using namespace std;
+
 class Game
 {
   public:
     Game(int width, int height, std::string title);
-    ~Game();
+    ~Game() noexcept;
 
     bool GameShouldClose() const;
     void Tick();
