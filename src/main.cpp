@@ -10,12 +10,8 @@ int main()
   const int screenWidth = 800;
   const int screenHeight = 600;
 
-  Game game(screenWidth, screenHeight, "testhere");
-  //Game game();
+  Game game(screenWidth, screenHeight, "Tetris 2021");
 
-  //std::cout << std::to_string(game.t);
-  //cout << game.title;
-  //cout << "test";
   while (!game.GameShouldClose())
   {
     game.Tick();
