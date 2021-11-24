@@ -1,27 +1,25 @@
-/*******************************************************************************************
-*
-*   Tetris
-*
-*   Tetris in Raylib!
-*
-*   Copyright (c) 2021 VTX3
-*
-********************************************************************************************/
+#include <iostream>
+//#include <string>
+#include "Game.hpp"
 
-#include "../headers/Game.h"
+using namespace std;
 
-int main(void)
+int main()
 {
-    const int screenWidth = 800;
-    const int screenHeight = 600;
-    //const std::string title = "Tetris";
 
-    Game game(screenWidth,screenHeight,"Tetris");
+  const int screenWidth = 800;
+  const int screenHeight = 600;
 
-    //while (!game.GameShouldClose())
-    //{
-      //game.Tick();
-    //}
+  Game game(screenWidth, screenHeight, "testhere");
+  //Game game();
 
-    return 0;
+  //std::cout << std::to_string(game.t);
+  //cout << game.title;
+  //cout << "test";
+  while (!game.GameShouldClose())
+  {
+    game.Tick();
+  }
+
+  return 0;
 }

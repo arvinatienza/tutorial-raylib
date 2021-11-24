@@ -1,19 +1,19 @@
 #pragma once
-#include <string>
 
 using namespace std;
 
 class Game
 {
   public:
-    Game(int width, int height, std::string title);
-    ~Game() noexcept;
+    Game(int width, int height, std::string newTitle);
+    ~Game();
 
     bool GameShouldClose() const;
     void Tick();
 
-  private:
-    void Draw();
-    void Update();
+    std::string title;
 
+  private:
+    void Update();
+    void Draw();
 };
