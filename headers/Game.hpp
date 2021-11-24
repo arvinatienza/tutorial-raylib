@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 using namespace std;
 
@@ -6,7 +7,9 @@ class Game
 {
   public:
     Game(int width, int height, std::string newTitle);
-    ~Game();
+    Game(const Game& other) = delete;
+    Game& operator=(const Game& other) = delete;
+    ~Game() noexcept;
 
     bool GameShouldClose() const;
     void Tick();

@@ -1,21 +1,21 @@
-#include <iostream>
-#include <raylib.h>
 #include <assert.h>
+#include <raylib.h>
 #include "Game.hpp"
 
 using namespace std;
 
 Game::Game(int width, int height, std::string newTitle)
 {
+  assert(!GetWindowHandle());
   title = newTitle;
   InitWindow(width, height, title.c_str());
   SetTargetFPS(60);
 
 }
 
-Game::~Game()
+Game::~Game() noexcept
 {
-  assert(IsWindowReady());
+  //assert(GetWindowHandle());
   CloseWindow();
 }
 
