@@ -4,12 +4,12 @@
 
 using namespace std;
 
-Game::Game(int width, int height, std::string newTitle)
+Game::Game(int width, int height, int fps, std::string newTitle)
 {
   assert(!GetWindowHandle());
   title = newTitle;
   InitWindow(width, height, title.c_str());
-  SetTargetFPS(60);
+  SetTargetFPS(fps);
 
 }
 

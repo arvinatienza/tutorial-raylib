@@ -8,7 +8,7 @@ int main()
   const int screenWidth = 800;
   const int screenHeight = 600;
 
-  Game game(screenWidth, screenHeight, "Tetris 2021");
+  Game game(screenWidth, screenHeight, 60, "Tetris 2021");
 
   while (!game.GameShouldClose())
   {
