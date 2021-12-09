@@ -30,3 +30,5 @@ Board::Board(int x_in, int y_in, int width_in, int height_in, int cellsize_in)
   assert(cellSize > 0);
   cells.resize(width*height);
 }
+
+void Board::SetCell(int x, int y, Color c)
